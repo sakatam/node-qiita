@@ -1,0 +1,30 @@
+{
+  "name": "qiita",
+  "version": "0.0.0",
+  "description": "nodejs wrapper for qiita api",
+  "main": "lib/qiita.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "coffee --compile --output lib/ src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sakatam/node-qiita.git"
+  },
+  "keywords": [
+    "qiita"
+  ],
+  "author": "sakatam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sakatam/node-qiita/issues"
+  },
+  "homepage": "https://github.com/sakatam/node-qiita",
+  "devDependencies": {
+    "coffee-script": "^1.7.1"
+  },
+  "dependencies": {
+    "request": "^2.36.0",
+    "underscore": "^1.6.0"
+  }
+}
