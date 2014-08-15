@@ -8,8 +8,7 @@ class Resource
       opts = { path: opts } if _.isString opts
       path = @path + opts.path
       token = @token
-      {methods, resources} = opts
-      @[name] = new Resource { path, token, methods, resources }
+      @[name] = new Resource { path, token, methods: opts.methods, resources: opts.resources }
 
     methods or= ["get"]
     _.each methods, (method) =>
