@@ -1,6 +1,6 @@
 {
   "name": "qiita",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "nodejs wrapper for qiita api",
   "main": "lib/qiita.js",
   "scripts": {
