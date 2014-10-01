@@ -30,7 +30,7 @@ class Resource
 
       options = { method: method, url: path }
 
-      if method == "GET"
+      if method == "get"
         options.qs = params
       else
         options.json = params
