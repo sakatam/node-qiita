@@ -1,7 +1,7 @@
 node-qiita
 ==========
 
-[Qiita API](https://qiita.com/docs) の nodejs wrapper
+[Qiita API](http://qiita.com/api/v2/docs) の nodejs wrapper
 
 
 インストール
@@ -17,6 +17,9 @@ node-qiita
 Qiita = require "qiita"
 # インスタンス化
 q = new Qiita token: "xxxxxxxxx" # tokenはオプショナル
+
+# インスタンス化 (qiita teamの場合)
+q = new Qiita team: "team_id", token: "xxxxxxxxx"
 
 # id, passwordからトークン取得
 q.auth.post url_name: "myname", password: "abcdedg", (err, res, data) ->

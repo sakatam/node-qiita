@@ -1,6 +1,6 @@
 {
   "name": "qiita",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "nodejs wrapper for qiita api",
   "main": "lib/qiita.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "gulp-plumber": "^0.6.5"
   },
   "dependencies": {
-    "request": "^2.36.0",
-    "underscore": "^1.6.0"
+    "request": "^2.44.0",
+    "underscore": "^1.7.0"
   }
 }
