@@ -34,9 +34,10 @@ class Qiita extends Resource
         following_tags: "/following_tags"
 
   constructor: (config = {}) ->
+    host = if config.team? then "#{config.team}.qiita.com" else "qiita.com"
     super
       token: config.token
-      path: "https://qiita.com/api/v1"
+      path: "https://#{host}/api/v2"
       resources: RESOURCES
 
 module.exports = Qiita
