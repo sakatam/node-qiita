@@ -15,6 +15,7 @@
     "qiita"
   ],
   "author": "sakatam",
+  "contributors": ["k2wanko"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sakatam/node-qiita/issues"
