@@ -1,6 +1,6 @@
 {
   "name": "qiita",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "nodejs wrapper for qiita api",
   "main": "lib/qiita.js",
   "scripts": {
@@ -15,7 +15,9 @@
     "qiita"
   ],
   "author": "sakatam",
-  "contributors": ["k2wanko"],
+  "contributors": [
+    "k2wanko"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sakatam/node-qiita/issues"
