@@ -5,34 +5,46 @@ class Qiita extends Resource
   POST   = "post"
   PUT    = "put"
   DELETE = "delete"
+  PATCH  = "patch"
 
   RESOURCES =
-    auth:
-      path: "/auth"
-      methods: [POST]
+    comments:
+      path: "/comments/:id"
+      methods: [GET, PATCH, DELETE]
+      resource:
+        thank:
+          path: "/thank"
+          methods: [PUT, DELETE]
     items:
       path: "/items/:item_id"
-      methods: [GET, POST, PUT, DELETE]
+      methods: [GET, POST, PATCH, DELETE]
       resources:
+        comments:
+          path: "/comments"
+          methods: [GET, POST]
         stock:
           path: "/stock"
           methods: [PUT, DELETE]
-    rateLimit: "/rate_limit"
-    search: "/search"
-    stocks: "/stocks"
     tags:
-      path: "/tags/:url_name"
+      path: "/tags/:id"
       resources:
-        items: path: "/items"
-    user: "/user"
+        items:"/items"
+    templates:
+      path: "/templates/:id"
+      methods: [GET, POST, PATCH, DELETE]
+    projects:
+      path: "/projects/:id"
+      methods: [GET, POST, PATCH, DELETE]
     users:
-      path: "/users/:url_name"
+      path: "/users/:id"
       resources:
+        following_tags: "/following_tags"
+        followees: "/followees"
+        followers: "/followers"
         items: "/items"
         stocks: "/stocks"
-        following_users: "/following_users"
-        following_tags: "/following_tags"
-
+    expanded_templates: "/expanded_templates"
+    authenticated_user: "/authenticated_user"
   constructor: (config = {}) ->
     host = if config.team? then "#{config.team}.qiita.com" else "qiita.com"
     super
