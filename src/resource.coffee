@@ -35,9 +35,7 @@ class Resource
       else
         options.json = params
 
-      if @token?
-        options.headers or= {}
-        options.headers["Authorization"] = "Bearer #{@token}"
+      options.auth = { bearer: @token } if @token?
 
       request options, cb
       null
