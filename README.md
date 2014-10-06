@@ -36,7 +36,7 @@ q = new Qiita team: "team_id", token: "xxxxxxxxx"
 # 投稿の作成
 q.items.post
   title: "吾輩は猫である"
-  body: "吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当けんとうが....."
+  body: "吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当が....."
   tags: [{name: "小説"}]
 , (err, res, body) ->
   # リクエスト結果の検証
