@@ -1,11 +1,8 @@
 Resource = require "./resource"
 
 class Qiita extends Resource
-  GET    = "get"
-  POST   = "post"
-  PUT    = "put"
-  DELETE = "delete"
-  PATCH  = "patch"
+  
+  {GET, POST, PUT, PATCH, DELETE} = Resource.methods
 
   RESOURCES =
     comments:

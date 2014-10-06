@@ -30,7 +30,7 @@ class Resource
 
       options = { method: method, url: path }
 
-      if method == "get"
+      if method is Resource.methods.GET
         options.qs = params
       else
         options.json = params
@@ -39,5 +39,12 @@ class Resource
 
       request options, cb
       null
+
+  @methods:
+    GET    : "get"
+    PUT    : "put"
+    POST   : "post"
+    PATCH  : "patch"
+    DELETE : "delete"
 
 module.exports = Resource
